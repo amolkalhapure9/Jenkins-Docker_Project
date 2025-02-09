@@ -1,1 +1,5 @@
-ERROR: failed to solve: failed to copy: httpReadSeeker: failed open: failed to do request: Get "https://docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com/registry-v2/docker/registry/v2/blobs/sha256/2b/2b6aeca0d35eaeba6792e24ec7ac37fbba71e1b5551572a1dd251c7230f371ef/data?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=f1baa2dd9b876aeb89efebbfc9e5d5f4%2F20250209%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250209T135512Z&X-Amz-Expires=1200&X-Amz-SignedHeaders=host&X-Amz-Signature=8191cd554b5ba2bd3b7c924847bf6cdf9ebfeec318e78d51dd67bc75bd5b31e9": dial tcp: lookup docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com on 127.0.0.53:53: server misbehaving
+ environment {
+        DOCKER_IMAGE_NAME = 'landingpage-image'
+        DOCKER_TAG = 'latest'
+        DOCKER_REGISTRY = 'docker.io'
+    }
