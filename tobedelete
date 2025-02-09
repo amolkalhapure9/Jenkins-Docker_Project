@@ -3,3 +3,14 @@
         DOCKER_TAG = 'latest'
         DOCKER_REGISTRY = 'docker.io'
     }
+
+
+stage('Set Docker DNS') {
+            steps {
+                script {
+                    // Modify Docker daemon's DNS configuration
+                    sh 'echo "{ \\"dns\\": [\\"8.8.8.8\\", \\"8.8.4.4\\"] }" | sudo tee /etc/docker/daemon.json'
+                    sh 'sudo systemctl restart docker'  // Restart Docker to apply DNS changes
+                }
+            }
+        }
